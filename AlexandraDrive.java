@@ -19,13 +19,15 @@ public class AlexandraDrive extends LinearOpMode {
 
         while(opModeIsActive()){
             double left_stick_y = -gamepad1.left_stick_y;
+            double left_stick_x = -gamepad1.left_stick_x;
 
-            front_left.setPower(left_stick_y);
-            front_right.setPower(left_stick_y);
-            back_left.setPower(left_stick_y);
-            back_right.setPower(left_stick_y);
+            front_left.setPower(left_stick_y + left_stick_x);
+            front_right.setPower(left_stick_y - left_stick_x);
+            back_left.setPower(left_stick_y - left_stick_x);
+            back_right.setPower(left_stick_y + left_stick_x);
 
             telemetry.addData("left_stick_y",left_stick_y);
+            telemetry.addData("left_stick_x",left_stick_x);
             telemetry.update();
         }
     }
