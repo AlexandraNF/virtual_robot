@@ -2,11 +2,12 @@ package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
+import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 
 @TeleOp(name = "AlexandraDrive")
 public class AlexandraDrive extends LinearOpMode {
-    public void runOpMode() throws InterruptedExeption {
+    public void runOpMode() throws InterruptedException {
         DcMotor front_left = hardwareMap.dcMotor.get("front_left_motor");
         DcMotor front_right = hardwareMap.dcMotor.get("front_right_motor");
         DcMotor back_left = hardwareMap.dcMotor.get("back_left_motor");
